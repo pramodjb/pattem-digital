@@ -1,0 +1,21 @@
+<h5>Refresh within 1min</h5>
+<div *ngIf="undefined === restItems">Loading...</div>
+<div *ngIf="undefined !== restItems">
+ <!--  <button (click)='startTimer()'>Start Timer</button>
+<button (click)='pauseTimer()'>Pause</button> -->
+
+<p>{{ now | date:'ss'}}</p>
+  <table id="customers">
+
+  <tr>
+    <th>Author</th>
+    <th>Title</th>
+
+  </tr>
+  <tr *ngFor="let post of restItems['articles']">
+    <td >{{ post.author }}</td>
+    <td>{{ post.title }}</td>
+  
+  </tr>
+</table>
+</div>
